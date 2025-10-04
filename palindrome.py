@@ -15,9 +15,10 @@ def is_palindrome(text):
     if not isinstance(text, str) or text is None:
         return False
     # Remove non-alphanumeric characters and convert to lowercase
-    clean_text = ''.join(char.lower() for char in text if char.isalnum())
+    clean_text = "".join(char.lower() for char in text if char.isalnum())
     # Check if the string equals its reverse
     return clean_text == clean_text[::-1]
+
 
 def main():
     """
@@ -29,6 +30,7 @@ def main():
         print(f"'{test_string}' is a palindrome!")
     else:
         print(f"'{test_string}' is not a palindrome.")
+
 
 if __name__ == "__main__":
     main()

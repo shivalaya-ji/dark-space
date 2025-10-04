@@ -1,7 +1,4 @@
-# Program to display the Fibonacci sequence up to n-th term
-# A Fibonacci sequence is the integer sequence of 0, 1, 1, 2, 3, 5, 8....
-# The first two terms are 0 and 1. All other terms come from adding the two
-# preceding terms (nth = (n-1)th + (n-2)th).
+"""Iterative Fibonacci utilities."""
 
 from typing import List
 
