@@ -18,15 +18,14 @@ def is_palindrome(text):
     clean_text = ''.join(char.lower() for char in text if char.isalnum())
     # Check if the string equals its reverse
     return clean_text == clean_text[::-1]
+
+def main():
     """
     Entry point for testing palindrome functionality.
     Prompts the user for input and prints whether it is a palindrome.
     """
     test_string = input("Enter a string to check if it's a palindrome: ")
     if is_palindrome(test_string):
-        print(f"'{test_string}' is a palindrome!")
-    else:
-        print(f"'{test_string}' is not a palindrome.")
         print(f"'{test_string}' is a palindrome!")
     else:
         print(f"'{test_string}' is not a palindrome.")
