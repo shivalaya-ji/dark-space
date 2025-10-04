@@ -6,26 +6,13 @@ def authaccount_lookup(session):
     return get_account(user_id)
 
 
-def authorize(session):
-    if not authorize(session):
-        raise exception("AccessDenied")
-
-    return True
-
-
 #  ********************************************
-#
 #  Don't touch anything below this line
 #  Utility functions below
-#
 #  ********************************************
 
 db = pymysql.connect(
-    host='mysql',
-    port=3306,
-    user='root',
-    passwd='letmein',
-    db='BankApp'
+    host="mysql", port=3306, user="root", passwd="letmein", db="BankApp"
 )
 
 
@@ -42,9 +29,9 @@ def get_account(user_id):
         return False
 
     return {
-        'balance': data[0],
-        'dob': data[1],
-        'username': get_user(user_id)[0]
+        "balance": data[0],
+        "dob": data[1],
+        "username": get_user(user_id)[0],
     }
 
 
@@ -94,8 +81,8 @@ def authorize(session):
     user_id = session["user_id"]
     decoded_jwt = session["decoded_jwt"]
 
-    username = decoded_jwt['username']
-    role = decoded_jwt['role']
+    username = decoded_jwt["username"]
+    role = decoded_jwt["role"]
 
     current_users_id = get_user_id(username)
 

@@ -1,6 +1,4 @@
-# Python program to display the Fibonacci sequence.
-# In this program, we store the number of terms to be displayed in nterms.
-# A recursive function recur_fibo() calculates the nth term.
+"""Recursive Fibonacci example."""
 
 
 def recur_fibo(n: int) -> int:

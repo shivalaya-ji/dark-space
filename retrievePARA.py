@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+
 html_doc = """
 <html>
 <head>
@@ -21,11 +22,11 @@ euismod eget ipsum. Vivamus mollis adipiscing viverra. Morbi at sem eget nisl
 euismod porta.</p>
 <p><a href="https://www.w3resource.com/html/HTML-tutorials.php">Learn HTML from
 w3resource.com</a></p>
-<p><a href="https://www.w3resource.com/css/CSS-tutorials.php">Learn CSS from 
+<p><a href="https://www.w3resource.com/css/CSS-tutorials.php">Learn CSS from
 w3resource.com</a></p>
 </body>
 </html>
 """
-soup = BeautifulSoup(html_doc, 'html.parser')
+soup = BeautifulSoup(html_doc, "html.parser")
 print("Here you go, sir:")
 print(soup.find_all("p"))
